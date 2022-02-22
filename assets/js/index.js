@@ -1,5 +1,8 @@
 const { $ } = window;
-const currentYear = 21
+const currentYear = 22
+// gather all objects in an array (objects are imported at the bottom of the html where the scripts live)
+const itinAll = [itin2017, itin2018, itin2019, itin2020, itin2021, itin2022];
+
 // once the document is ready hide korean and display only english
 // also hide all other tour dates except the current year
 $(function() {
@@ -127,9 +130,6 @@ $(document).on("click", '[data-toggle="lightbox"]', function(event) {
     alwaysShowClose: true
   });
 });
-
-// gather all objects in an array (objects are imported at the bottom of the html where the scripts live)
-const itinAll = [itin2017, itin2018, itin2019, itin2020, itin2021];
 
 // loop over the itinAll
 for (let j = 0; j < itinAll.length; j += 1) {
